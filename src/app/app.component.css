@@ -1,0 +1,9 @@
+.main-container{
+    background-image: url('../assets/prism.png');
+    /*background-color: #212529;*/
+    size: 100%;
+    min-height: 900px;
+    /*max-height: calc(100vw - 100px);*/
+    padding: 0px;
+    overflow: auto;
+}
