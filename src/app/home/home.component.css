@@ -69,6 +69,38 @@ a{
     margin-top: 2vw;
 }
 
+/* Input style*/
+
+.form-input{
+    padding: 2vh;
+    border-radius: 2vh;
+    border-width: 0.5vh;
+    border-color: #921f34;
+    margin: 0.5vh;
+}
+
+.form-text-area{
+    padding: 2vh;
+    border-radius: 2vh;
+    border-width: 0.5vh;
+    border-color: #921f34;
+    margin: 0.5vh;
+    min-width: 3vw;
+    min-height: 3vw;
+    overflow: auto;
+}
+
+.form-container{
+    margin: 1.5vh;
+}
+
+.submit-button{
+    margin: 1vh;
+    background-color: #921f34;
+    color: white;
+    border-radius: 0.5vh;
+}
+
 /*Responsive fixes for mobile */ 
 @media only screen and (max-width: 800px) {
     .goodest-dog{

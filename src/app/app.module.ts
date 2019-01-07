@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { WhoComponent } from './who/who.component';
+import { ReactiveFormsModule} from '@angular/forms';
 
 import { SimpleSmoothScrollModule } from 'ng2-simple-smooth-scroll';
 
@@ -17,7 +18,8 @@ import { SimpleSmoothScrollModule } from 'ng2-simple-smooth-scroll';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SimpleSmoothScrollModule
+    SimpleSmoothScrollModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

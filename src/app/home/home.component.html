@@ -64,15 +64,15 @@
         </div>
       </div>
     </div>
-    
+
     <div class="row">
       <div class="col-md-12">
         <div class="text-center">
-    
+
           <div class="skills">
             My skills
           </div>
-    
+
           <div class="row">
             <div class="col-md-3">
               <div class="skill-bars">
@@ -85,12 +85,12 @@
                   </span>
                   <div class="progress-value">
                     Angular
-    
+
                   </div>
                 </div>
               </div>
             </div>
-    
+
             <div class="col-md-3">
               <div class="skill-bars">
                 <div class="progress blue">
@@ -106,7 +106,7 @@
                 </div>
               </div>
             </div>
-    
+
             <div class="col-md-3">
               <div class="skill-bars">
                 <div class="progress blue">
@@ -118,12 +118,12 @@
                   </span>
                   <div class="progress-value">
                     PHP
-    
+
                   </div>
                 </div>
               </div>
             </div>
-    
+
             <div class="col-md-3">
               <div class="skill-bars">
                 <div class="progress blue">
@@ -139,9 +139,9 @@
                 </div>
               </div>
             </div>
-    
+
           </div>
-    
+
           <div class="row progress-container">
             <div class="col-md-3">
               <div class="skill-bars">
@@ -173,7 +173,7 @@
                 </div>
               </div>
             </div>
-    
+
           </div>
         </div>
       </div>
@@ -216,7 +216,7 @@
       </div>
 
       <div class="col-md-3">
-        <div class="card card-contact text-center">
+        <div class="card card-contact text-center" (click)="toggleForm()">
           <div class="card-body">
             You can write me an email to jpontebravo@gmail.com or click here to get the contact form. <br>
             <i class="fab fa-wpforms fa-5x"></i>
@@ -229,6 +229,37 @@
       </div>
 
     </div>
+
+    <div class="row">
+      <ng-container *ngIf="openForm">
+
+        <div class="col-md-12 text-center form-container">
+          <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+            <div>
+              <input class="form-input" type="Email" placeholder="Enter your Email" formControlName='email'>
+            </div>
+            <div>
+              <input class="form-input" type="text" placeholder="First Name" formControlName='firstName'>
+            </div>
+            <div>
+              <input class="form-input" type="text" placeholder="Last Name" formControlName='lastName'>
+            </div>
+            <div>
+              <input class="form-text-area" type="textarea" placeholder="Write your message here." formControlName='comments'>
+            </div>
+            <div>
+              <button class="btn submit-button" type="submit">Send</button>
+            </div>
+          </form>
+        </div>
+
+      </ng-container>
+    </div>
+    <div *ngIf="openForm.value">
+      {{openForm.value}}
+    </div>
+
+
 
   </div>
 
